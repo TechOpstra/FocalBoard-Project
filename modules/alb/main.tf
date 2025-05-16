@@ -32,7 +32,7 @@ resource "aws_lb_target_group" "demo_tg" {
 
 resource "aws_lb_listener" "demo_listener" {
   load_balancer_arn = aws_lb.demo_alb.arn
-  port              = "8000"
+  port              = "80"
   protocol          = "HTTP"
 
   default_action {
