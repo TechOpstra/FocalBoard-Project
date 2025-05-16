@@ -10,4 +10,4 @@ sudo usermod -aG docker ${USER}
 sudo systemctl enable docker
 
 # Pull and run Docker container with your command
-sudo docker run -d -p 8000:8000 mattermost/focalboard
+sudo docker run -d -p 8080:8000 mattermost/focalboard
