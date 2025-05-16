@@ -18,7 +18,7 @@ resource "aws_lb_target_group" "demo_tg" {
 
   health_check {
     interval            = 30
-    path                = "/login"
+    path                = "/"
     timeout             = 5
     healthy_threshold   = 3
     unhealthy_threshold = 3
@@ -32,7 +32,7 @@ resource "aws_lb_target_group" "demo_tg" {
 
 resource "aws_lb_listener" "demo_listener" {
   load_balancer_arn = aws_lb.demo_alb.arn
-  port              = "80"
+  port              = "8000"
   protocol          = "HTTP"
 
   default_action {
